@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { IntlProvider } from "react-intl";
+import Wrapper from "./components/Wrapper";
 import French from './lang/fr.json'
 import Arabic from './lang/ar.json'
 import English from './lang/en.json'
@@ -21,9 +21,9 @@ if (locale === 'en') {
 
 ReactDOM.render(
   <React.StrictMode>
-    <IntlProvider locale={locale} messages={French}>
+    <Wrapper>
       <App />
-    </IntlProvider>
+    </Wrapper>
   </React.StrictMode>,
   document.getElementById('root')
 );
